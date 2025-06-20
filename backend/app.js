@@ -1,9 +1,11 @@
+require("dotenv").config();
+
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const Product = require("./models/Product");
-const uri =
-  "mongodb+srv://kerelosmikhail:0M9bR06hdY0Go6NG@cluster0.kza7m8q.mongodb.net/backAPI?retryWrites=true&w=majority&appName=Cluster0";
+
+const uri = process.env.MONGODB_URI;
 
 // Connect to MongoDB Atlas
 mongoose
